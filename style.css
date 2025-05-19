@@ -521,3 +521,12 @@ nav a:hover {
     padding: 1rem;
   }
 }
+
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: white;        
+  font-size: 0.9rem;
+  background-color: #111; 
+  margin-top: 2rem;
+}
