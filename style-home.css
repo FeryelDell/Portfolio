@@ -540,3 +540,12 @@ area {
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 0.4s; /* Adjust if needed to sync with overview */
 }
+
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: white;         /* Or a color that fits your site */
+  font-size: 0.9rem;
+  background-color: #111; /* Optional: dark background */
+  margin-top: 2rem;
+}
