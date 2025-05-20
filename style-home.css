@@ -224,34 +224,38 @@ nav a:hover {
 
 
 
-
 @media screen and (max-width: 768px) {
   .overview-map-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* center horizontally */
     justify-content: center;
     text-align: center;
     padding: 20px;
+    width: 100%;
   }
 
   .intro-overview,
   .map-section {
     width: 100%;
-    max-width: 90%; /* keeps it from stretching edge-to-edge */
-    margin: 0 auto;
+    max-width: 400px;  /* or any reasonable max width */
+    margin: 0 auto;    /* center block */
   }
 
   .map-section img {
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     height: auto;
   }
 
+  /* Ensure map container is centered */
   .map-container {
     position: relative;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
   }
 
   .intro-overview {
@@ -277,6 +281,7 @@ nav a:hover {
     text-decoration: none;
   }
 }
+
 
 
 
