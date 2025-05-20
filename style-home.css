@@ -541,11 +541,28 @@ area {
   animation-delay: 0.4s; /* Adjust if needed to sync with overview */
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  padding-bottom: 40px; /* height of footer */
+  box-sizing: border-box;
+}
+
 .site-footer {
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1111116c; /* or transparent if you want */
+  color: white;
   text-align: center;
-  padding: 1rem 0;
-  color: white;         /* Or a color that fits your site */
   font-size: 0.9rem;
-  background-color: #111; /* Optional: dark background */
-  margin-top: 2rem;
+  z-index: 1000;
 }
