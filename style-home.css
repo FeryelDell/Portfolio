@@ -19,7 +19,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #e0d1f9;
+
 }
 
 /* Header (if used separately) */
@@ -86,7 +86,6 @@ header {
 /* Main content box */
 main {
   font-family: 'Playfair Display', Georgia, serif;
-  padding-top: 120px; /* Adjust to match banner height */
   margin-top: 160px;
   max-width: 1600px;
   width: 100%;
@@ -97,7 +96,6 @@ main {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   color: #d1a5e8;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   font-size: 1.2rem;
 }
 .intro-heading {
@@ -395,10 +393,6 @@ nav a:hover {
   text-shadow: 1px 1px 4px #a186f8;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 
 .intro-overview {
   animation: fadeIn 1s ease-out;
@@ -565,4 +559,84 @@ html, body {
   text-align: center;
   font-size: 0.9rem;
   z-index: 1000;
+}
+
+/* Ensure input fields and textareas match theme */
+input, textarea, select {
+  color: #e0d1f9;
+  background-color: rgba(30, 20, 50, 0.8);
+  border: 1px solid #a186f8;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #cbbbe8;
+  opacity: 0.7;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #c9a0ff;
+  box-shadow: 0 0 6px rgba(170, 120, 255, 0.5);
+}
+
+/* Style submit and button elements */
+button, input[type="submit"] {
+  background-color: #4b297d;
+  color: #e0d1f9;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #6f4ad1;
+}
+
+@media (max-width: 700px) {
+  .banner {
+    height: 80px;
+    padding: 10px 0;
+  }
+  .banner h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .banner nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .banner nav a {
+    margin: 5px 10px;
+  }
+  .map-section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .map-section img {
+    width: 100%;
+    height: auto;
+  }
+  .content-box {
+    padding: 1.5rem 1rem;
+    margin: 30px auto;
+  }
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #a763d4;
+  outline-offset: 3px;
 }
