@@ -28,11 +28,10 @@ header {
   padding: 10px 20px;
 }
 
-/* Banner with name and navigation */
 .banner {
-  background-color: rgba(20, 10, 40, 0.8); /* fallback */
+  background-color: rgba(20, 10, 40, 0.8);
   color: #e0d1f9;
-  padding: 20px 0;
+  padding: 30px 0 30px 0; /* top and bottom padding */
   width: 100%;
   position: fixed;
   top: 0;
@@ -40,10 +39,8 @@ header {
   box-sizing: border-box;
   z-index: 1000;
   text-align: center;
-  height: 120px;
+  height: 140px; /* increased height */
   transition: background-color 0.3s ease;
-  text-align: center;
-  height: 120px;
 }
 
 
@@ -98,11 +95,7 @@ main {
   color: #d1a5e8;
   font-size: 1.2rem;
 }
-.intro-heading {
-  font-size: 1.6rem; /* You can make this smaller or larger as needed */
-  font-weight: normal; /* Optional: make it less bold */
-  margin-top: 0.5rem;
-}
+
 h1 {
   font-family: 'Playfair Display', serif;
 }
@@ -156,7 +149,6 @@ nav a:hover {
   max-width: 1500px;
   margin: 60px auto; /* adds space between sections */
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  margin: 60px auto;
   height: 100%;
   overflow:hidden;
 }
@@ -187,6 +179,7 @@ nav a:hover {
   padding: 2rem;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden
 }
 
 
@@ -207,18 +200,76 @@ nav a:hover {
 
 .image img {
   width: 100%;
-  max-width: none;
+  max-width: 100%;
   height: auto;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
+
+.overview-map-wrapper {
+  position: relative;
+  display:flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow: visible; /* ensures content isn't cut off */
+  min-height: 400px; /* or adjust as needed */
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+  
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+  .overview-map-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; /* changed from center */
+    width: 100%;
+  }
+  .intro-overview,
+  .map-section {
+    width: 90%;
+    max-width: 500px;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  .intro-overview {
+    padding: 1rem;
+    animation: fadeIn 1s ease-out;
+    line-height: 1.5;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #f2e8ff;
+    font-size: 0.95rem;
+  }
+}
+
+
+
 
 @media (max-width: 700px) {
   .content {
     flex-direction: column !important;
     text-align: center;
   }
+}
   
+
+@media (max-width: 1600px) {
+  .content-box {
+    max-width: 95vw;
+  }
+
   .image img {
     max-width: 80%;
     margin: 0 auto;
@@ -232,10 +283,19 @@ nav a:hover {
 }
 
 .music-player-section {
+  position: fixed; /* or absolute, depending on context */
+  bottom: 40px;    /* distance from bottom of viewport */
+  right: 20px;     /* center horizontally */
+  transform: translateX(-50%);
   margin: 2rem 0;
   padding: 0 20px;
   color: #e0d1f9;
-  position: relative;
+  margin-bottom: 60px; /* adjust this to be about the footer height */
+  z-index: 9999;  
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 8px 16px;
+ 
 }
 
 /* Container aligned right, stacking heading and button vertically */
@@ -247,6 +307,8 @@ nav a:hover {
   flex-direction: column;
   align-items: flex-end;
   gap: 0.3rem;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 /* Smaller heading text */
@@ -346,20 +408,17 @@ nav a:hover {
 }
 
 
-.intro-overview {
-  max-width: 600px;
-  margin-left: 20px;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #ddd;
-  line-height: 1.5;
-}
 
 .intro-overview h2 {
-  font-size: 1.3rem;
+  color: #e5d3ff;
+  text-shadow: 1px 1px 4px #a186f8;
+  font-size: 1.4rem;
+  
   margin-bottom: 0.5rem;
-  color: #a186f8;
+  
 }
+
+
 
 .intro-overview ul {
   list-style-type: disc;
@@ -389,28 +448,15 @@ nav a:hover {
 }
 
 .intro-heading {
+  font-size: 1.6rem; /* You can make this smaller or larger as needed */
+  font-weight: normal; /* Optional: make it less bold */
+  margin-top: 0.5rem;
   color: #e5d3ff;
   text-shadow: 1px 1px 4px #a186f8;
 }
 
 
-.intro-overview {
-  animation: fadeIn 1s ease-out;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem 1.5rem;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 2rem;
-  font-size: 0.95rem;
-  color: #f2e8ff;
-}
 
-.intro-overview h2 {
-  color: #e5d3ff;
-  text-shadow: 1px 1px 4px #a186f8;
-  font-size: 1.4rem;
-}
 
 .intro-overview ul {
   margin-top: 0.5rem;
@@ -425,11 +471,9 @@ nav a:hover {
 /*map*/
 
 
-.map-section {
-  margin: 2rem 0;
-  text-align: center;
+html, body {
+  overflow-x: hidden !important;
 }
-
 .map-section h2 {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -438,8 +482,9 @@ nav a:hover {
 }
 
 .map-section img {
-  width: 600px;
-  height: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
   border: 3px solid #fff;
   image-rendering: pixelated;
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
@@ -456,33 +501,53 @@ area {
   cursor: pointer;
 }
 
-.overview-map-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 2rem;
-  flex-wrap: nowrap; /* Prevent wrapping */
+
+@media (min-width: 701px) {
+  .intro-overview {
+  flex: none;
+  width: 55%;
+  max-width: 90%;
+  padding: 0.8rem 1rem;
+ 
+  margin-left:2rem;
+ 
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+  animation: fadeIn 1s ease-out;
+  background: rgba(255, 255, 255, 0.05);
+ 
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #f2e8ff;
+  box-sizing: border-box; 
+
+ }
 }
 
-.intro-overview {
-  flex: 1;
-  max-width: 50%;
-  min-width: 300px;
-}
+
+
+
+
+
+
 
 .map-section {
   position: relative;
-  width: 600px;
-  height: 350px;
-  flex: 1;
-  max-width: 600px;
+  left: -1%;    /* just a little right */
+  top: 32px;  
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  flex: 3;
   min-width: 300px;
   text-align: center;
   opacity: 0;
   animation: fadeInUp 1s ease-out forwards;
   animation-delay: 0.4s;
-
 }
 
 .map-heading {
@@ -494,19 +559,23 @@ area {
 
 .map-label {
   position: absolute;
+  transform: translate(-50%, -50%);
   color: #fff;
   font-weight: bold;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  text-shadow:
-    0 0 5px #fff,
-    0 0 10px #fff,
-    0 0 15px #fff,
-    0 0 20px #fff;
+  font-size: 16px; /* base size */
+  text-shadow: 1px 1px 2px #000;
+  background-color: rgba(0, 0, 0, 0.158);
   cursor: pointer;
   text-decoration: none;
   user-select: none;
-  transition: text-shadow 0.3s ease;
+  padding: 0.3em 0.8em;
+  border-radius: 0.5em;
+ 
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
 }
 
 .map-label:hover {
@@ -517,6 +586,36 @@ area {
     0 0 35px #fff,
     0 0 45px #fff;
 }
+
+
+
+
+@media (max-width: 600px) {
+  .map-section {
+    left: -10px; /* move 10px left */
+    /* or if left isn't set, use margin */
+    margin-left: -10px;
+    max-width: 100%; /* make sure it doesn't overflow */
+    overflow-x: hidden;
+  }
+
+  .intro-overview {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: block;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .intro-heading2 {
+    font-size: 1rem;
+  }
+}
+
 
 @keyframes fadeInUp {
   from {
@@ -529,11 +628,7 @@ area {
   }
 }
 
-.map-section {
-  opacity: 0;
-  animation: fadeInUp 1s ease-out forwards;
-  animation-delay: 0.4s; /* Adjust if needed to sync with overview */
-}
+
 
 html, body {
   height: 100%;
@@ -543,7 +638,7 @@ html, body {
 
 .page-wrapper {
   min-height: 100%;
-  padding-bottom: 40px; /* height of footer */
+  padding-bottom: 40px; 
   box-sizing: border-box;
 }
 
@@ -601,7 +696,7 @@ button:hover, input[type="submit"]:hover {
 
 @media (max-width: 700px) {
   .banner {
-    height: 80px;
+    height: 100px;
     padding: 10px 0;
   }
   .banner h1 {
@@ -640,3 +735,4 @@ textarea:focus-visible {
   outline: 3px solid #a763d4;
   outline-offset: 3px;
 }
+
