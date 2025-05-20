@@ -522,11 +522,86 @@ nav a:hover {
   }
 }
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  padding-bottom: 40px; /* height of footer */
+  box-sizing: border-box;
+}
+
 .site-footer {
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1111116c; /* or transparent if you want */
+  color: white;
   text-align: center;
-  padding: 1rem 0;
-  color: white;        
   font-size: 0.9rem;
-  background-color: #111; 
+  z-index: 1000;
+}
+
+
+.contact-intro {
+  max-width: 600px;   /* optional, to limit width */
+  margin: 0 auto 2rem auto;  /* centers and adds bottom margin */
+  text-align: center;  /* center-align text */
+  font-size: 1rem;   /* smaller font size */
+  line-height: 1.4;    /* comfortable line spacing */
+  color: #fff;         /* keep text white or change as needed */
+}
+
+
+.contact-info {
+  text-align: center;
+  font-size: 0.9rem;
   margin-top: 2rem;
+  color: #fff;
+}
+
+.contact-info a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #00bfbf;
+}
+
+/*pixel character*/
+
+#pixel-character {
+  position: fixed;        /* fixed relative to viewport */
+  bottom: 70px;           /* 70px above the bottom (footer area) */
+  left: 20px;             /* 20px from the left edge */
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  z-index: 1000;          /* on top of everything */
+}
+
+#chat-bubble {
+  position: fixed;
+  bottom: 140px;          /* chat bubble just above pixel buddy */
+  left: 20px;
+  transform: none;        /* no horizontal centering */
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 220px;
+  font-family: monospace;
+  display: none;
+  white-space: normal;
+  z-index: 1100;
+  pointer-events: none;
 }
