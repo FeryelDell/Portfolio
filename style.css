@@ -30,9 +30,9 @@ header {
 
 /* Banner with name and navigation */
 .banner {
-  background-color: rgba(20, 10, 40, 0.8); /* fallback */
+  background-color: rgba(20, 10, 40, 0.8);
   color: #e0d1f9;
-  padding: 20px 0;
+  padding: 30px 0 30px 0; /* top and bottom padding */
   width: 100%;
   position: fixed;
   top: 0;
@@ -40,11 +40,10 @@ header {
   box-sizing: border-box;
   z-index: 1000;
   text-align: center;
-  height: 120px;
+  height: 140px; /* increased height */
   transition: background-color 0.3s ease;
-  text-align: center;
-  height: 120px;
 }
+
 
 
 
@@ -647,7 +646,7 @@ button:hover, input[type="submit"]:hover {
 
 @media (max-width: 700px) {
   .banner {
-    height: 80px;
+    height: 100px;
     padding: 10px 0;
   }
   .banner h1 {
@@ -685,4 +684,10 @@ input:focus-visible,
 textarea:focus-visible {
   outline: 3px solid #a763d4;
   outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  .text {
+    font-size: 1rem; /* or adjust to your liking */
+  }
 }
