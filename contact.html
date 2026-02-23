@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  
+
+
+  <title>Contact - Portfolio</title>
+</head>
+<body>
+  <div class="page-wrapper">
+    <canvas id="particle-canvas"></canvas>
+
+      <header class="banner">
+          <div class="banner-content">
+              <h1>Feryel's Portfolio</h1>
+                  <nav>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="about.html" class="nav-link">About Me</a>
+                    <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                  </nav>
+          </div>
+      </header>
+
+    <main>
+      <section class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="contact-intro">
+          <p>If you have any questions, feedback, or just want to say hi, feel free to reach out! You can fill out the form below or connect with me on social media.</p>
+          <p>I'm always open to new opportunities collaborations or commissions, so don't hesitate to get in touch!</p>
+          <p>Looking forward to hearing from you!</p>
+          <p>PS: Don't forget to click on my Pixel Buddy. ;)</p>
+        </div>
+
+        
+        <form id="contact-form" action="https://formspree.io/f/mpwdnlqp" method="POST">
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+        
+        <div class="social-icons">
+          <a href="https://github.com/FeryelDell" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github fa-2x"></i>
+          </a>
+          <a href="https://www.instagram.com/feryel_dell/?hl=en" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/feryel-tesnim-kermiche-a16869247/" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin fa-2x"></i>
+          </a>
+        </div>
+
+
+        <div class="contact-info">
+          <p>Email: <a href="mailto:kermicheferyeltesnim@gmail.com">kermicheferyeltesnim@gmail.com</a></p>
+          <p>Phone: <a href="tel:+48 668621248">+48 668621248</a></p>
+        </div>
+
+
+        <img id="pixel-character" src="pixel-character.png" alt="Pixel Buddy" />
+        <div id="chat-bubble" style="display:none;"></div>
+
+
+      </section>
+    </main>
+
+    
+    <script src="script2.js"></script>
+  </div>
+  <footer class="site-footer">
+      &copy; 2025 Feryel Tesnim Kermiche. All rights reserved.
+  </footer>
+
+</body>
+</html>

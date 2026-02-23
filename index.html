@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style-home.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Home - Portfolio</title>
+</head>
+<body>
+  <!-- Particle canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Pixel chat character -->
+  <div id="chat-container">
+    <img id="pixel-character" src="pixel-character.png" alt="Pixel Character" />
+    <div id="chat-bubble" style="display:none;">Hello! How are you?</div>
+  </div>
+
+  <!-- All content layered above particles -->
+  <div class="page-content">
+    <header class="banner">
+      <div class="banner-content">
+        <h1>Feryel's Portfolio</h1>
+        <nav>
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About Me</a>
+          <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <h1>Home</h1>
+      <section class="intro-section">
+        <h2 class="intro-heading">Welcome to My Portfolio</h2>
+        <p class="intro-heading2">Hi! I'm Feryel, a passionate developer and artist who loves crafting creative solutions and beautiful visuals. Dive in to explore my projects, skills, and a little bit of my world.</p>
+      </section>
+      <h2 class="map-heading">Explore My Projects</h2>
+
+      <div class="overview-map-wrapper">
+        <section class="intro-overview">
+          <h2>Portfolio Overview</h2>
+          <p>This portfolio is organized into four main sections to help you explore my work and get to know me better:</p>
+          <ul>
+            <li><strong>Home:</strong> Landing page with a quick intro.</li>
+            <li><strong>About Me:</strong> Learn about my background, skills, and interests.</li>
+            <li><strong>DISSOCIATED:</strong> A first-person psychological detective game developed in Unreal Engine 5.</li>
+            <li><strong>Projects:</strong> A showcase of my favorite coding and art projects.</li>
+            <li><strong>Contact:</strong> Get in touch with me via email or social media.</li>
+          </ul>
+          <p>Feel free to explore and enjoy the interactive elements sprinkled throughout the site!</p>
+        </section>
+        
+       <section class="map-section">
+
+          <img src="pixelroom.png" usemap="#site-map" alt="Pixel Map Navigation" />
+          
+          <a href="index.html" class="map-label" style="top: 55%; left: 54%;">Home</a>
+          <a href="about.html" class="map-label" style="top: 40%; left: 22%;">About Me</a>
+          <a href="projects.html" class="map-label" style="top: 72%; left: 22%;">Projects</a>
+          <a href="contact.html" class="map-label" style="top: 53%; left: 82%;">Contact</a>
+
+        </section>      
+      </div>
+      
+
+      
+    </main>
+  </div>
+
+  <section class="music-player-section">
+        <div class="music-header-right">
+          <h2>Enjoy Music by Tame Impala</h2>
+          <button id="play-pause-btn" aria-label="Play music">🎵 Play</button>
+        </div>
+        <audio id="audio-player" src="song.mp3"></audio>
+      </section>
+  <!-- JavaScript logic -->
+  <script src="script.js"></script>
+
+  <footer class="site-footer">
+    &copy; 2025 Feryel Tesnim Kermiche. All rights reserved.
+  </footer>
+
+  <div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="fullImage">
+    <div id="caption"></div>
+  </div>
+</body>
+</html>

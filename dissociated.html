@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <title>DISSOCIATED | Unreal Engine 5 Game</title>
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+    <header class="banner">
+        <div class="banner-content">
+            <h1>Feryel's Portfolio</h1>
+                <nav>
+                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="about.html" class="nav-link">About Me</a>
+                  <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
+                  <a href="projects.html" class="nav-link">Projects</a>
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+        </div>
+    </header>
+
+    <section class="content-box" style="text-align: center; padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <h1 style="font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 10px; color: #fff;">DISSOCIATED</h1>
+        <p style="font-size: 1.2rem; color: #aaa; margin-bottom: 30px;">A First-Person Detective Mystery built in Unreal Engine 5</p>
+        
+        <div class="video-container" style="max-width: 900px; margin: 0 auto; box-shadow: 0 0 15px rgba(76, 175, 80, 0.2);">
+            <video width="100%" height="auto" controls poster="images/GameThumbnail.png" style="border-radius: 4px;">
+                <source src="images/Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p style="padding: 10px; color: #ccc; font-size: 0.9rem; margin: 0; font-style: italic; text-align: center;">
+                🎥 <strong>Gameplay Showcase:</strong> A brief clip demonstrating the level design, inventory system, atmospheric lighting, and 'Thread' deduction mechanic in action.
+            </p>
+        </div>
+    </section>
+    
+
+     <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2 style="border-bottom: 2px solid #4CAF50; display: inline-block;">The Premise</h2>
+
+                <p><strong>DISSOCIATED</strong> is a first-person psychological detective game developed in Unreal Engine 5.</p>
+
+                <p>
+                The player investigates a missing person case inside a confined residential space. 
+                Progression is driven by observation, collection of clues, and structured deduction rather than combat or scripted events.
+                </p>
+
+                <p>
+                The core mechanic revolves around “Threads” - investigative chains composed of interconnected clues. 
+                Completing a thread alters the environment and advances the narrative.
+                </p>
+
+                <p><strong>My Role:</strong> Solo Developer - Game Design, Blueprint Programming, UI/UX, Level Design, Narrative Direction.</p>
+
+            </div>
+            <div class="image">
+                <img src="images/PremiseAtmosphere.png" alt="Atmospheric Level Design" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+            <h2>Core Gameplay Framework</h2>
+
+            <p>The gameplay loop is built around five primary systems:</p>
+
+            <ul>
+                <li><strong>Exploration:</strong> Free movement (jump, crouch, flashlight control) within a restricted environment designed for repeated traversal.</li>
+                <li><strong>Interaction:</strong> Context-based object interaction system (E key) triggering inspections, item pickups, or narrative events.</li>
+                <li><strong>Inventory:</strong> Array-based item system accessible via (I), supporting item usage and dependency logic.</li>
+                <li><strong>Deduction Log:</strong> Thread-based investigation interface (B) that tracks collected clues and validates progression.</li>
+                <li><strong>State Progression:</strong> Environmental changes triggered by completed threads or item use.</li>
+            </ul>
+
+            <p>This structure ensures that narrative progression is system-driven rather than scripted.</p>
+            </div>
+            <div class="image">
+                <img src="images/CoreGameplay.png" alt="Atmospheric Level Design" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2>Systems Architecture (Blueprint)</h2>
+
+                <p>The project is built entirely using Blueprint-based modular systems.</p>
+
+                <ul>
+                <li><strong>Item Structs:</strong> Each item contains ID, icon, description, dependency flags, and usable targets.</li>
+                <li><strong>Thread System:</strong> Data-driven deduction validation system that checks required clue states before progression.</li>
+                <li><strong>State Controller:</strong> Centralized logic manager that updates environment variables when threads are completed.</li>
+                <li><strong>UI-State Separation:</strong> Game logic runs independently of UI widgets to avoid freezing gameplay states.</li>
+                </ul>
+
+                <p>Systems were designed to be scalable, allowing new items or threads to be added without restructuring the entire project.</p>
+
+            </div>
+            <div class="image">
+                <div class="image-gallery">
+                    <img src="images/ClueManager1.png" alt="Clue and Thread Manager System Logic part 1" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                    <img src="images/ClueManager2.png" alt="Clue and Thread Manager System Logic part 2" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                    <img src="images/InteractionItemBlueprint.png" alt="Reusable Item Blueprint" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                    <img src="images/TriggerBoxLogic.png" alt="Examples of some trigger boxes used" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2>Level Design & Architecture</h2>
+                <p>Leveraging my background in <strong>Architectural Design</strong>, I created environments that tell a story through space.</p>
+                <ul>
+                    <li><strong>Assets:</strong> A hybrid pipeline using custom <strong>Blender</strong> models for key narrative items and Fab/Quixel assets for environmental textures.</li>
+                    <li><strong>Audio:</strong> Implemented royalty-free soundscapes (Pixabay) using Sound Cues to create spatial tension.</li>
+                </ul>
+            </div>
+            <div class="image-gallery">
+                <img src="images/HousePlan.png" alt="Top overview of the Main Level" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                <img src="images/Composition.png" alt="Perspective view of the Main Level" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2>Game Logic & Flow Design</h2>
+
+                <p>
+                The investigation system is structured as conditional logic chains rather than linear scripted events.
+                Player actions activate flags that validate deduction threads, which then trigger controlled environmental changes.
+                </p>
+
+                <p>
+                Each “Thread” contains required clue states. Once validated, the system updates global variables
+                that modify level states, unlock areas, or introduce new narrative elements.
+                </p>
+
+                <p>
+                Flow diagrams were used during development to ensure clarity between player input,
+                system validation, and environmental response. This prevented circular logic
+                and ensured scalable progression design.
+                </p>
+
+                <ul>
+                    <li><strong>Thread Validation Flow:</strong> Clue Collected → Flag Activated → Thread Condition Check → Environment Update</li>
+                    <li><strong>Item Logic Flow:</strong> Inventory Select → Condition Check → Target Validation → Event Trigger</li>
+                    <li><strong>UI State Flow:</strong> Gameplay → UI Overlay → Safe Pause State → Resume Without Logic Break</li>
+                </ul>
+            </div>
+
+            <div class="image">
+                <div class="image-gallery">
+                    <img src="images/Chart.jpg" alt="Clue and Thread Validation Flowchart" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                    <img src="images/BPStoryManager.png" alt="Overview of the Story Manager Blueprint" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                    <img src="images/StoryStates.png" alt="Screenshot of E_StoryState showcasing all missions" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2>UI & Interaction Design</h2>
+
+                <p>
+                The UI was designed to support immersion while maintaining clarity and system transparency.
+                 All interface elements were built using Unreal Engine's UMG framework.
+                </p>
+
+                <ul>
+                    <li><strong>Custom HUD:</strong> Minimal investigative overlay designed to avoid screen clutter.</li>
+                    <li><strong>Inventory System (I):</strong> Grid-based array system displaying item icons with usable state validation.</li>
+                    <li><strong>Deduction Log (B):</strong> Structured thread interface showing collected clues and completion states.</li>
+                    <li><strong>Pause System (P):</strong> Controlled game state handling without interrupting underlying logic variables.</li>
+                    <li><strong>Flashlight System (F):</strong> Toggle-based visibility modifier impacting atmosphere and exploration.</li>
+                </ul>
+
+                <p>
+                UI logic is separated from gameplay logic to ensure safe state transitions and prevent unintended execution during overlays.
+                </p>
+            </div>
+
+            <div class="image">
+                <div class="image-gallery stacked-images">
+                    <img src="images/GameUI.png" onclick="openModal(this.src)" alt="Inventory UI Design" class="modal-trigger">
+                    <img src="images/DeductionLogUI.png" onclick="openModal(this.src)" alt="Deduction Log Interface" class="modal-trigger">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+            <h2>Character Design - The Detective</h2>
+
+            <p>
+            The player controls Detective Adrien Vale investigating a disappearance case.
+            The character is intentionally understated to allow player projection.
+            </p>
+
+            <p>
+            Concept art was created to explore psychological tone, posture, and emotional restraint.
+            The design reflects fatigue, analytical distance, and controlled demeanor.
+            </p>
+
+            <p>
+            Narrative elements are revealed indirectly through investigation rather than explicit backstory exposition.
+            </p>
+            </div>
+
+            <div class="image">
+            <img src="images/CharacterDesign1.png" alt="Detective Concept Art" onclick="openModal(this.src)" class="modal-trigger"">
+            </div>
+        </div>
+</section>
+
+ <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
+        <div class="content">
+            <div class="text">
+                <h2>Development Insights</h2>
+
+                <p>
+                Developing DISSOCIATED strengthened my understanding of modular Blueprint architecture,
+                state management in Unreal Engine, and struct-driven system design.
+                </p>
+
+                <p>
+                A primary focus was ensuring scalability - new items, threads, or environmental changes
+                can be added without restructuring the core logic framework.
+                </p>
+
+                <p>
+                Future improvements would include:
+                </p>
+
+                <ul>
+                    <li>Persistent save/load system with serialized thread states.</li>
+                    <li>Expanded branching deduction paths.</li>
+                    <li>Performance profiling and optimization for larger environments.</li>
+                    <li>Enhanced environmental feedback systems.</li>
+                </ul>
+
+                <p>
+                This project reflects both creative direction and technical system architecture,
+                combining narrative design with structured gameplay engineering.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+   <footer style="text-align: center; padding: 50px 20px;">
+        <h3>Interested in the details?</h3>
+        <div class="links" style="margin-top: 20px;">
+            <a href="screenshots/PITCH_DECK.pdf" 
+            download 
+            class="btn" 
+            style="background-color: #4CAF50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 5px; font-size: 1.2rem; font-weight: bold;">
+            📄 Download Full Pitch Deck (PDF)
+            </a>
+        </div>
+        <br>
+        <p><a href="projects.html" style="color: #aaa;">← Back to All Projects</a></p>
+    </footer>
+
+
+      <div id="imageModal" class="modal">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <img class="modal-content" id="fullImage">
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+        
+        <div id="caption"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

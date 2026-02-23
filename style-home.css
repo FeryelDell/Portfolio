@@ -1,0 +1,767 @@
+/* Reset and box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body background and font setup */
+body {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 14px; /* default base size */
+  line-height: 1.6;
+  color: #e0d1f9; /* your theme color */
+  background-color: #000; /* optional background */
+  margin: 0;
+  padding: 0;
+  background-image: url('images/darkwarsawwallpaper.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+/* Header (if used separately) */
+header {
+  background: #333;
+  padding: 10px 20px;
+}
+
+.banner {
+  background-color: rgba(20, 10, 40, 0.8);
+  color: #e0d1f9;
+  padding: 30px 0 30px 0; /* top and bottom padding */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  z-index: 1000;
+  text-align: center;
+  height: 140px; /* increased height */
+  transition: background-color 0.3s ease;
+}
+
+
+
+/* Name heading */
+.banner h1 {
+  margin: 0 0 15px;
+  font-weight: bold;
+  font-size: 2.2rem;
+}
+
+/* Navigation */
+.banner nav {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 1.1rem;
+}
+
+.banner nav a {
+  color: #e0d1f9;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.banner nav a:hover,
+.banner nav a.active {
+  text-decoration: underline;
+  color: #a763d4;
+}
+
+/* Content wrapper */
+.banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Main content box */
+main {
+  font-family: 'Playfair Display', Georgia, serif;
+  margin-top: 160px;
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 160px 20px 20px 20px; /* top padding to push below fixed banner */
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #d1a5e8;
+  font-size: 1.2rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+}
+
+main > h1 {
+  font-family: 'Playfair Display', serif;
+  padding-left: 40px;
+  font-size: 30px;
+}
+
+/* Navigation link styles */
+nav a {
+  color: #e0d1f9;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+}
+
+nav a.active {
+  text-decoration: underline;
+  color: #a763d4;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ddd; /* or whatever hover color you want */
+}
+
+
+.nav-link {
+  color: #e0d1f9;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  text-decoration: underline;
+  color: #a763d4;
+}
+
+.content-box {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e0d1f9;
+  padding: 3rem 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  max-width: 1500px;
+  margin: 60px auto; /* adds space between sections */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: 100%;
+  overflow:hidden;
+}
+
+
+
+
+/* Second section: image left, text right */
+.content-box:nth-child(odd) .content {
+  flex-direction: row;
+}
+
+
+.content-box:nth-child(even) .content {
+  flex-direction: row-reverse;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%; /* Wider box */
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  overflow-x: hidden
+}
+
+
+.text {
+  flex: 2;
+  font-size: 1.1rem;
+  color: #fff;
+  padding: 1rem 0; /* Add this to control vertical spacing */
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.overview-map-wrapper {
+  position: relative;
+  display:flex;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+  overflow: visible; /* ensures content isn't cut off */
+  min-height: 400px; /* or adjust as needed */
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+  
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .overview-map-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .intro-overview,
+  .map-section {
+    width: 100%;
+    max-width: 400px;  /* or any reasonable max width */
+    margin: 0 auto;    /* center block */
+  }
+
+  .map-section img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ensure map container is centered */
+  .map-container {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .intro-overview {
+    padding: 1rem;
+    animation: fadeIn 1s ease-out;
+    line-height: 1.5;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #f2e8ff;
+    font-size: 0.95rem;
+  }
+  .map-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 0.85rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px 6px;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+}
+
+
+
+
+
+@media (max-width: 700px) {
+  .content {
+    flex-direction: column !important;
+    text-align: center;
+  }
+}
+  
+
+@media (max-width: 1600px) {
+  .content-box {
+    max-width: 95vw;
+  }
+
+  .image img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.banner nav a {
+  font-size: 1.1rem !important; /* Force consistent font size */
+}
+.banner nav {
+  font-size: 1.1rem !important; /* Force consistent font size */
+}
+
+.music-player-section {
+  position: fixed; /* or absolute, depending on context */
+  bottom: 40px;    /* distance from bottom of viewport */
+  right: 20px;     /* center horizontally */
+  transform: translateX(-50%);
+  margin: 2rem 0;
+  padding: 0 20px;
+  color: #e0d1f9;
+  margin-bottom: 60px; /* adjust this to be about the footer height */
+  z-index: 9999;  
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 6px;
+  padding: 8px 16px;
+ 
+}
+
+/* Container aligned right, stacking heading and button vertically */
+.music-header-right {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+/* Smaller heading text */
+.music-header-right h2 {
+  font-size: 0.8rem;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  user-select: none;
+  color: #b8a1e1;
+}
+
+/* Button styling */
+#play-pause-btn {
+  background-color: #4b297d;
+  color: #e0d1f9;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Playfair Display', serif;
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+#play-pause-btn:hover {
+  background-color: #6f4ad1;
+}
+
+#particle-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  z-index: 2;
+}
+
+/*chatbot*/
+
+
+
+#chat-container {
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  width: 48px;
+  height: 48px;
+  z-index: 1000;
+}
+
+#pixel-character {
+  position: fixed;
+  bottom: 50px;  /* lifted higher */
+  left: 40px;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+
+
+#chat-bubble {
+  position: absolute;
+  bottom: 60px; /* place above the character */
+  left: 70px; /* shift right so bubble doesn’t overlap character */
+  max-width: 200px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  pointer-events: none;
+  z-index: 1;
+  white-space: normal;
+}
+/* little arrow below the bubble */
+#chat-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+  border-width: 10px 10px 0 0;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+}
+
+
+
+.intro-overview h2 {
+  color: #e5d3ff;
+  text-shadow: 1px 1px 4px #a186f8;
+  font-size: 1.4rem;
+  
+  margin-bottom: 0.5rem;
+  
+}
+
+
+
+.intro-overview ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-overview ul li {
+  margin-bottom: 0.4rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.intro-section {
+  animation: fadeIn 1s ease-out;
+}
+
+.intro-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.intro-heading {
+  font-size: 1.6rem; /* You can make this smaller or larger as needed */
+  font-weight: normal; /* Optional: make it less bold */
+  margin-top: 0.5rem;
+  color: #e5d3ff;
+  text-shadow: 1px 1px 4px #a186f8;
+}
+
+
+
+
+.intro-overview ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.intro-overview li {
+  margin-bottom: 0.4rem;
+}
+
+
+/*map*/
+
+
+html, body {
+  overflow-x: hidden !important;
+}
+.map-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.map-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid #fff;
+  image-rendering: pixelated;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.map-section img:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+area {
+  cursor: pointer;
+}
+
+
+@media (min-width: 701px) {
+  .intro-overview {
+  flex: none;
+  width: 55%;
+  max-width: 90%;
+  padding: 0.8rem 1rem;
+ 
+  margin-left:2rem;
+ 
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+  animation: fadeIn 1s ease-out;
+  background: rgba(255, 255, 255, 0.05);
+ 
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #f2e8ff;
+  box-sizing: border-box; 
+
+ }
+}
+
+
+
+
+
+
+
+
+.map-section {
+  position: relative;
+  left: -1%;    /* just a little right */
+  top: 32px;  
+  width: 100%;
+  min-width: 300px;
+  height: auto;
+  flex: 3;
+  min-width: 300px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.map-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto 1rem;
+  width: 100%;
+}
+
+.map-label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px; /* base size */
+  text-shadow: 1px 1px 2px #000;
+  background-color: rgba(0, 0, 0, 0.158);
+  cursor: pointer;
+  text-decoration: none;
+  user-select: none;
+  padding: 0.3em 0.8em;
+  border-radius: 0.5em;
+ 
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+}
+
+.map-label:hover {
+  text-shadow:
+    0 0 8px #fff,
+    0 0 15px #fff,
+    0 0 25px #fff,
+    0 0 35px #fff,
+    0 0 45px #fff;
+}
+
+
+
+
+@media (max-width: 600px) {
+  .map-section {
+    left: -10px; /* move 10px left */
+    /* or if left isn't set, use margin */
+    margin-left: -10px;
+    max-width: 100%; /* make sure it doesn't overflow */
+    overflow-x: hidden;
+  }
+
+  .intro-overview {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: block;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .intro-heading2 {
+    font-size: 1rem;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  padding-bottom: 40px; 
+  box-sizing: border-box;
+}
+
+.site-footer {
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1111116c; /* or transparent if you want */
+  color: white;
+  text-align: center;
+  font-size: 0.9rem;
+  z-index: 1000;
+}
+
+/* Ensure input fields and textareas match theme */
+input, textarea, select {
+  color: #e0d1f9;
+  background-color: rgba(30, 20, 50, 0.8);
+  border: 1px solid #a186f8;
+  border-radius: 8px;
+  padding: 0.5rem;
+  font-family: 'Playfair Display', serif;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #cbbbe8;
+  opacity: 0.7;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #c9a0ff;
+  box-shadow: 0 0 6px rgba(170, 120, 255, 0.5);
+}
+
+/* Style submit and button elements */
+button, input[type="submit"] {
+  background-color: #4b297d;
+  color: #e0d1f9;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #6f4ad1;
+}
+
+@media (max-width: 700px) {
+  .banner {
+    height: 100px;
+    padding: 10px 0;
+  }
+  .banner h1 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .banner nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  .banner nav a {
+    margin: 5px 10px;
+  }
+  .map-section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  .map-section img {
+    width: 100%;
+    height: auto;
+  }
+  .content-box {
+    padding: 1.5rem 1rem;
+    margin: 30px auto;
+  }
+}
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #a763d4;
+  outline-offset: 3px;
+}
+

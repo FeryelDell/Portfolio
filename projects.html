@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Projects - Portfolio</title>
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+
+    <header class="banner">
+        <div class="banner-content">
+            <h1>Feryel's Portfolio</h1>
+                <nav>
+                  <a href="index.html" class="nav-link">Home</a>
+                  <a href="about.html" class="nav-link">About Me</a>
+                  <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
+                  <a href="projects.html" class="nav-link">Projects</a>
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+        </div>
+    </header>
+
+  <main>
+    <h1>Projects</h1>
+    
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Space Cat Shooter Game</h2>
+            <p>
+              In the Space Cat Game, you control a space-traveling cat navigating through an endless space filled with obstacles and collectibles. The primary objective is to survive as long as possible while increasing your score by collecting items and avoiding hazards.
+            </p>
+            <p>
+              The game features a simple yet engaging gameplay loop, where players can earn points by collecting items and avoiding obstacles. The game is designed to be easy to pick up and play, making it suitable for players of all ages.   
+            </p>
+            <p>
+              The game is built using Python and Visual Studio Code, showcasing my skills in game development and programming. The artwork was made by me using Clip Studio Paint.
+            </p>
+            <p>
+              The game is inspired by my cat Johan, who is a playful and curious feline. The game captures his adventurous spirit as he explores the vastness of space, destroying objects and meowing playfully.
+            </p>
+            <p>
+                You can play the game by clicking the link below:   
+                <br>
+                <a href="https://github.com/FeryelDell/SpaceCatGame" target="_blank" rel="noopener noreferrer" class="github-link">View on GitHub</a>
+            </p>
+        </div>
+        <div class="image">
+          <div class="image-gallery"> 
+              <img src="images/game1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Space Cat Game Start Screen" class="modal-trigger">
+              <img src="images/game.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Space Cat Gameplay" class="modal-trigger">
+              <img src="images/game2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Space Cat Gameplay with obstacles" class="modal-trigger">
+              <img src="images/game3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Space Cat Game Over Screen" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Memory Card Game</h2>
+            <p>
+              The Memory Card Game is a fun and interactive game designed to test and improve your memory skills. The objective of the game is to match pairs of cards by flipping them over two at a time. If the cards match, they remain face up; if not, they are flipped back over.
+            </p>
+            <p>
+              The game features three difficulty levels: easy, medium, and hard. Each level offers a different number of cards to match. The easy level has 4 cards, the medium level has 16 cards, and the hard level has 36 cards. 
+            </p>
+            <p>
+              The game features a timer that increases with the difficulty level,and a bonus score for correct cards streaks.
+            </p>
+            <p>
+              The game is built using c# and Windows Forms App (.NET Framework).
+            </p>
+        </div>
+        <div class="image">
+          <div class="image-gallery"> 
+              <img src="images/secondgame1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Menu" class="modal-trigger">
+              <img src="images/secondgame2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Easy Level" class="modal-trigger">
+              <img src="images/secondgame3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Medium Level" class="modal-trigger">
+              <img src="images/secondgame4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Hard Level" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated Incident Response System</h2>
+          
+          <p><strong>Role:</strong> Automation Engineer (Independent) | <strong>Tech Stack:</strong> Google Apps Script, JavaScript, Gmail API</p>
+          
+          <p><strong>The Problem:</strong> Support tickets were sitting in the inbox for 20+ minutes before manual triage, creating a bottleneck between Customer Support and Engineering.</p>
+          
+          <p><strong>The Solution:</strong> I built a serverless background worker using Google Apps Script. It monitors the Gmail inbox via API, parses email bodies for keywords (e.g., 'Urgent', 'Bug'), and automatically logs them into a central Google Sheets database.</p>
+          
+          <p><strong>The Impact:</strong></p>
+          <ul>
+            <li>Reduced initial response time from <strong>20 min to <1 second</strong>.</li>
+            <li>Eliminated manual data entry for ticket logging.</li>
+            <li>Standardized data format for the Engineering team.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/AppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
+              <img src="images/Sheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated IT Asset Tracker (ETL Pipeline)</h2>
+          
+          <p><strong>Tech Stack:</strong> Google Apps Script (Serverless) | GitHub REST API | Google Sheets | JSON</p>
+          
+          <p><strong>The Problem:</strong> Manual tracking of software projects leads to outdated reports and disconnected stakeholders.</p>
+          
+          <p><strong>The Solution:</strong> I engineered a serverless automation script that acts as a bridge between version control and operational reporting. It extracts live repository metadata, transforms raw JSON into structured tables, and loads it into a public dashboard.</p>
+          
+          <p><strong>Key Technical Features:</strong></p>
+          <ul>
+            <li><strong>API Integration:</strong> Implemented <code>UrlFetchApp</code> to query the GitHub REST API.</li>
+            <li><strong>Data Transformation:</strong> Parsed complex nested JSON objects into clean, tabular rows.</li>
+            <li><strong>Zero-Maintenance:</strong> Configured time-based triggers (CRON) for hourly auto-updates.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/CHART.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="System Architecture Diagram" class="modal-trigger">
+              
+              <img src="images/GitHubAppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
+              
+              <img src="images/GitHubSheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Calculation Game</h2>
+            <p>
+              The Calculation Game is an interactive game designed to test and improve your math skills. The objective of the game is to solve a series of math problems, there is also a timer that calculates the time taken to solve the problems, that is later added into your score.
+              So the lower your score is, the better you are at math!
+            </p>
+            <p>
+              The game is built using c# and Windows Forms App (.NET Framework).
+            </p>
+        </div>
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/thirdgame1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Calculation Game Start" class="modal-trigger">
+              <img src="images/thirdgame2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Calculation Game End Score" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Hotel Management System using SQL Server</h2>
+            <p>
+              Developed a comprehensive Hotel Management System using Microsoft SQL Server Management Studio. The project involved designing the database schema, writing efficient queries, and implementing core hotel operations such as room bookings, check-ins, and billing. Showcased skills in database normalization, stored procedures, and maintaining data integrity to optimize hotel management workflows.
+            </p>
+            <p>
+              The project is built using Microsoft SQL Server Management Studio (SSMS).
+            </p>
+        </div>
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/SQL1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="SQL Server Database Diagram" class="modal-trigger">
+              <img src="images/SQL2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="SQL Server Query Example" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="content-box wide-images">
+      <div class="content">
+        <div class="text">
+          <h2>Art Gallery</h2>
+            <p>Some of my art work, featuring a variety of styles and techniques.</p>
+            <p>I enjoy exploring different mediums, including digital art, traditional painting and porcolain art.</p>
+            <p>My art often reflects my interests in nature, animals, and character design or fan arts.</p>
+        </div>
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/art1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a character in a forest" class="modal-trigger">
+              <img src="images/art2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of an anime character with fire" class="modal-trigger">
+              <img src="images/art3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a character portrait" class="modal-trigger">
+              <img src="images/art4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a cat" class="modal-trigger">
+              <img src="images/art5.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Porcelain plate with a bird painting" class="modal-trigger">
+              <img src="images/art6.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a character in a dynamic pose" class="modal-trigger">
+              <img src="images/art7.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Traditional painting of a landscape" class="modal-trigger">
+              <img src="images/art8.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a character with a sword" class="modal-trigger">
+              <img src="images/art9.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Digital art of a character from a game" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-box architecture-gallery">
+      <div class="content">
+        <div class="text">
+          <h2>Architecture Projects</h2>
+            <p>Some of my architecture work, featuring a variety of concepts.</p>
+            <p>The first one is a 3D design of my sports complex project, it features a pool, a stadium and more. It was inspired by the concept of a butterfly, hence the roof design.</p>
+            <p>The second project is a museum, it features a gallery, a library and a cafe.</p>
+            <p>The third project is an open garden, it has green spaces, a playground and a cafe. I initially made three concepts for the garden, and I chose the one that I thought was the best.</p>
+        </div>
+        <div class="image">
+          <div class="image-gallery"> 
+              <img src="images/architecture1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="3D model of a sports complex" class="modal-trigger">
+              <img src="images/architecture2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="3D model of a museum" class="modal-trigger">
+              <img src="images/architecture3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Concept design for an open garden" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025 Feryel Tesnim Kermiche. All rights reserved.
+  </footer>
+
+  <div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <img class="modal-content" id="fullImage">
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+    
+    <div id="caption"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
