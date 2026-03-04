@@ -25,6 +25,66 @@
 
   <main>
     <h1>Projects</h1>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated Incident Response System</h2>
+          
+          <p><strong>Role:</strong> Automation Engineer (Independent) | <strong>Tech Stack:</strong> Google Apps Script, JavaScript, Gmail API</p>
+          
+          <p><strong>The Problem:</strong> Support tickets were sitting in the inbox for 20+ minutes before manual triage, creating a bottleneck between Customer Support and Engineering.</p>
+          
+          <p><strong>The Solution:</strong> I built a serverless background worker using Google Apps Script. It monitors the Gmail inbox via API, parses email bodies for keywords (e.g., 'Urgent', 'Bug'), and automatically logs them into a central Google Sheets database.</p>
+          
+          <p><strong>The Impact:</strong></p>
+          <ul>
+            <li>Reduced initial response time from <strong>20 min to <1 second</strong>.</li>
+            <li>Eliminated manual data entry for ticket logging.</li>
+            <li>Standardized data format for the Engineering team.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/AppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
+              <img src="images/Sheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated IT Asset Tracker (ETL Pipeline)</h2>
+          
+          <p><strong>Tech Stack:</strong> Google Apps Script (Serverless) | GitHub REST API | Google Sheets | JSON</p>
+          
+          <p><strong>The Problem:</strong> Manual tracking of software projects leads to outdated reports and disconnected stakeholders.</p>
+          
+          <p><strong>The Solution:</strong> I engineered a serverless automation script that acts as a bridge between version control and operational reporting. It extracts live repository metadata, transforms raw JSON into structured tables, and loads it into a public dashboard.</p>
+          
+          <p><strong>Key Technical Features:</strong></p>
+          <ul>
+            <li><strong>API Integration:</strong> Implemented <code>UrlFetchApp</code> to query the GitHub REST API.</li>
+            <li><strong>Data Transformation:</strong> Parsed complex nested JSON objects into clean, tabular rows.</li>
+            <li><strong>Zero-Maintenance:</strong> Configured time-based triggers (CRON) for hourly auto-updates.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/CHART.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="System Architecture Diagram" class="modal-trigger">
+              
+              <img src="images/GitHubAppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
+              
+              <img src="images/GitHubSheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
     
     <section class="content-box">
       <div class="content">
@@ -86,67 +146,7 @@
         </div>
       </div>
     </section>
-
-   <section class="content-box">
-      <div class="content">
-        <div class="text">
-          <h2>Automated Incident Response System</h2>
-          
-          <p><strong>Role:</strong> Automation Engineer (Independent) | <strong>Tech Stack:</strong> Google Apps Script, JavaScript, Gmail API</p>
-          
-          <p><strong>The Problem:</strong> Support tickets were sitting in the inbox for 20+ minutes before manual triage, creating a bottleneck between Customer Support and Engineering.</p>
-          
-          <p><strong>The Solution:</strong> I built a serverless background worker using Google Apps Script. It monitors the Gmail inbox via API, parses email bodies for keywords (e.g., 'Urgent', 'Bug'), and automatically logs them into a central Google Sheets database.</p>
-          
-          <p><strong>The Impact:</strong></p>
-          <ul>
-            <li>Reduced initial response time from <strong>20 min to <1 second</strong>.</li>
-            <li>Eliminated manual data entry for ticket logging.</li>
-            <li>Standardized data format for the Engineering team.</li>
-          </ul>
-        </div>
-        
-        <div class="image">
-          <div class="image-gallery stacked-images"> 
-              <img src="images/AppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
-              <img src="images/Sheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="content-box">
-      <div class="content">
-        <div class="text">
-          <h2>Automated IT Asset Tracker (ETL Pipeline)</h2>
-          
-          <p><strong>Tech Stack:</strong> Google Apps Script (Serverless) | GitHub REST API | Google Sheets | JSON</p>
-          
-          <p><strong>The Problem:</strong> Manual tracking of software projects leads to outdated reports and disconnected stakeholders.</p>
-          
-          <p><strong>The Solution:</strong> I engineered a serverless automation script that acts as a bridge between version control and operational reporting. It extracts live repository metadata, transforms raw JSON into structured tables, and loads it into a public dashboard.</p>
-          
-          <p><strong>Key Technical Features:</strong></p>
-          <ul>
-            <li><strong>API Integration:</strong> Implemented <code>UrlFetchApp</code> to query the GitHub REST API.</li>
-            <li><strong>Data Transformation:</strong> Parsed complex nested JSON objects into clean, tabular rows.</li>
-            <li><strong>Zero-Maintenance:</strong> Configured time-based triggers (CRON) for hourly auto-updates.</li>
-          </ul>
-        </div>
-        
-        <div class="image">
-          <div class="image-gallery stacked-images"> 
-              <img src="images/CHART.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="System Architecture Diagram" class="modal-trigger">
-              
-              <img src="images/GitHubAppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
-              
-              <img src="images/GitHubSheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
-          </div>
-        </div>
-      </div>
-    </section>
-
+    
     <section class="content-box">
       <div class="content">
         <div class="text">
