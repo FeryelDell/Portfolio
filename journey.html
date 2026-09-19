@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <title>Professional Journey - Portfolio</title>
+</head>
+<body>
+  <!-- Global Particle Background -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Global Banner -->
+  <header class="banner">
+    <div class="banner-content">
+      <h1>Feryel's Portfolio</h1>
+      <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Me</a>
+        <a href="journey.html" class="nav-link multiline-nav">Education &<br>Experience</a>
+        <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="timeline-wrapper">
+      
+      <!-- Work Experience Section -->
+      <h1 style="padding-left: 0;">Work <span class="highlight-blue">Experience</span></h1>
+
+      <div class="timeline">
+        <!-- Work Experience 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <h2>BrainRocket</h2>
+            <h3 class="role"><span class="arrow">→</span>DevOps Engineer</h3>
+            <ul>
+                <li><strong>Backend Automation & RPA:</strong> Engineered scalable Python scripts to mimic user behavior for high-volume, repetitive operational and security tasks, automating execution and significantly reducing manual overhead.</li>
+                <li><strong>CI/CD & Infrastructure:</strong> Configured and maintained GitLab CI/CD pipelines to host and deploy Python automations, managing secure API access and permissions via Google Cloud Console service accounts.</li>
+                <li><strong>Cross-Platform Integration:</strong> Architected multi-node workflows using n8n and REST/HTTP requests to seamlessly bridge different systems, including Slack, and Google Workspace.</li>
+                <li><strong>Web Application Development:</strong> Developed interactive, visual web applications using JavaScript and Google Apps Script, transforming raw spreadsheet data into manageable organizational dashboards for various departments.</li>
+                <li><strong>Version Control:</strong> Maintained clean, documented codebases and managed collaborative development workflows using Git.</li>
+                <li><strong>Zendesk Application Development:</strong> Developed custom Zendesk applications leveraging the Zendesk Apps Framework (ZAF) SDK and REST APIs to enhance both email and live chat support interfaces. Orchestrated real-time ticket management and operational alerts by integrating Zendesk webhooks directly with n8n and Slack.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Work Experience 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <h2>Foundever</h2>
+            <h3 class="role"><span class="arrow">→</span>Customer Support Professional in French</h3>
+            <ul>
+              <li>Delivered high-quality customer support in both French and English, across multiple channels (phone, chat and email)</li>
+              <li>Acted as an internal translator between agents and customers to ensure smooth communication and collaboration within the team</li>
+              <li>Effectively handled high-risk and highly frustrated customers, using empathy and problem-solving to de-escalate situations.</li>
+              <li>Assisted in recruiting new agents by conducting role-play scenarios to assess language and customer service skills.</li>
+              <li>Recognized for reliability, attention to detail, and consistent performance in fast-paced, high-pressure environments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education Section -->
+      <h1 style="padding-left: 0; margin-top: 80px;">Education & <span class="highlight-blue">Background</span></h1>
+
+      <div class="timeline">
+        <!-- Education 1 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <h2>Vistula University (Warsaw, Poland)</h2>
+            <h3 class="role"><span class="arrow">→</span> Bachelor's Degree, Computer Engineering</h3>
+            <ul>
+                <li>Mastered core computer science and engineering disciplines, including algorithm complexity, relational databases, network architecture, and operating systems.</li>
+                <li>Specialized in Cloud Technologies, Software Engineering, and Embedded Systems, applying advanced programming principles across Python, Java, and front-end web development.</li>
+                <li>Completed specialized elective coursework in Game Development, learning Unreal Engine 5 to build interactive mechanics, custom game logic, and 3D environments.</li>
+                <li>Conducted comprehensive system analysis and troubleshooting to optimize software performance and digital system reliability.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Education 2 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <h2>Architecture Degree (Constantine, Algeria)</h2>
+            <h3 class="role"><span class="arrow">→</span> Bachelor's Degree in Architecture</h3>
+            <ul>
+                <li>Architected comprehensive structural designs from initial 2D blueprints to fully realized 3D models with detailed interior layouts, featuring a modern museum, a library, and a commercial showroom.</li>
+                <li>Conceptualized and drafted diverse spatial environments, ranging from residential villas and recreational centers (centre de loisirs) to expansive open garden landscapes.</li>
+                <li>Constructed highly precise physical scale models (maquettes) to evaluate spatial relationships, environmental integration, and structural proportions in real-world dimensions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    &copy; 2026 Feryel Tesnim Kermiche. All rights reserved.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

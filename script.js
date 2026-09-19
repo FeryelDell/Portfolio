@@ -246,3 +246,19 @@ window.addEventListener('click', function(event) {
 document.querySelectorAll('.modal-trigger').forEach(image => {
   image.style.cursor = "pointer";
 });
+
+
+// ----- PDF Dropdown Toggle -----
+function togglePDF(containerId, btnElement) {
+  const container = document.getElementById(containerId);
+
+  if (container.style.display === "none" || container.style.display === "") {
+    container.style.display = "block";
+    btnElement.innerHTML = "❌ Close Documentation";
+    btnElement.style.backgroundColor = "#333";
+  } else {
+    container.style.display = "none";
+    btnElement.innerHTML = "📄 View Full Project Documentation";
+    btnElement.style.backgroundColor = "#4b297d";
+  }
+}

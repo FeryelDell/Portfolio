@@ -813,3 +813,281 @@ textarea:focus-visible {
     color: #ccc;
     z-index: 10006;
 }
+
+
+/* Custom Grid for Ansible Project */
+.ansible-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.ansible-main-img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.ansible-code-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ansible-code-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.ansible-code-grid img:hover {
+  transform: scale(1.02);
+}
+
+/* ----- Professional Journey Timeline ----- */
+.timeline-wrapper {
+  padding: 20px 40px 60px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* High-tech font for this section */
+}
+
+.journey-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #cbbbe8;
+  margin-bottom: 20px;
+}
+
+.step-number {
+  color: #00d2ff;
+  font-weight: bold;
+}
+
+.step-line {
+  height: 1px;
+  width: 60px;
+  background-color: #555;
+}
+
+.highlight-blue {
+  color: #0088ff;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 50px;
+  max-width: 1000px;
+  margin-top: 40px;
+}
+
+/* The Vertical Neon Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 9px;
+  width: 2px;
+  background: linear-gradient(to bottom, #0088ff, #00d2ff);
+  box-shadow: 0 0 10px rgba(0, 136, 255, 0.6);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+/* The Glowing Circular Nodes */
+.timeline-node {
+  position: absolute;
+  left: -50px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #0d0d0d;
+  border: 2px solid #00d2ff;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.8);
+  z-index: 2;
+}
+
+.timeline-node::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #00d2ff;
+}
+
+/* The Floating Dark Cards */
+.timeline-content {
+  background-color: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: #00d2ff;
+  transform: translateX(5px); /* Subtle slide-right effect on hover */
+}
+
+.timeline-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.timeline-content .role {
+  color: #00d2ff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.timeline-content .arrow {
+  margin-right: 8px;
+}
+
+.timeline-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.timeline-content li {
+  margin-bottom: 15px;
+  color: #d1a5e8;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.05rem;
+}
+
+.timeline-content li::before {
+  content: '•';
+  color: #00d2ff;
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  top: -4px;
+}
+
+/* Responsive adjustment for mobile screens */
+@media (max-width: 700px) {
+  .timeline {
+    padding-left: 30px;
+  }
+  .timeline::before {
+    left: 4px;
+  }
+  .timeline-node {
+    left: -35px;
+    width: 16px;
+    height: 16px;
+  }
+  .timeline-node::after {
+    width: 4px;
+    height: 4px;
+  }
+  .timeline-content {
+    padding: 20px;
+  }
+}
+
+
+/* Navigation Wrapping and Banner Height Fix */
+.banner {
+  height: 160px !important; /* Drops the purple box lower to fit the two lines */
+}
+
+main {
+  margin-top: 180px !important; 
+  padding-top: 40px !important; /* This removes the massive inner gap */
+}
+
+.banner nav {
+  align-items: center; /* Aligns single-line and double-line links perfectly in the middle */
+}
+
+.banner nav a {
+  white-space: nowrap; /* Forces "About Me" to stay on exactly one line */
+}
+
+.banner nav a.multiline-nav {
+  white-space: normal; /* Allows this specific link to have two lines */
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Enforce the global theme font on the Journey headers */
+.timeline-wrapper h1 {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: bold;
+  color: #e0d1f9; /* Matches your global header color */
+}
+
+
+/* ----- PDF Dropdown Viewer ----- */
+.pdf-toggle-btn {
+  margin-top: 20px;
+  background-color: #4b297d;
+  color: #e0d1f9;
+  border: 1px solid #a186f8;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.pdf-toggle-btn:hover {
+  background-color: #6f4ad1;
+  border-color: #c9a0ff;
+  box-shadow: 0 0 12px rgba(170, 120, 255, 0.6);
+}
+
+.pdf-container {
+  display: none; /* Hidden by default */
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #333;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInDown 0.4s ease-out;
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 700px; /* Gives plenty of room to read the slides */
+  border: none;
+  display: block;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .pdf-container iframe {
+    height: 500px; /* Slightly smaller on mobile phones */
+  }
+}

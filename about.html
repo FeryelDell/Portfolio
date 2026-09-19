@@ -17,6 +17,7 @@
                 <nav>
                   <a href="index.html" class="nav-link">Home</a>
                   <a href="about.html" class="nav-link">About Me</a>
+                  <a href="journey.html" class="nav-link multiline-nav">Education &<br>Experience</a>
                   <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
                   <a href="projects.html" class="nav-link">Projects</a>
                   <a href="contact.html" class="nav-link">Contact</a>
@@ -98,19 +99,19 @@
       <h2>Certificates</h2>
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="images/python.jpg" alt="Python Certificate">
+          <img src="images/python.jpg" alt="Python Certificate" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
           <p class="gallery-title">Basics of Python Certificate</p>
         </div>
         <div class="gallery-item">
-          <img src="images/datascience.jpg" alt="Data Science Certificate">
+          <img src="images/datascience.jpg" alt="Data Science Certificate" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
           <p class="gallery-title">Basics of Data Science Certificate</p>
         </div>
         <div class="gallery-item">
-          <img src="images/FDCC.jpg" alt="Code Challenge">
+          <img src="images/FDCC.jpg" alt="Code Challenge" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
           <p class="gallery-title">5 Day Coding Challenge Certificate from Code Institute</p>
         </div>
         <div class="gallery-item">
-          <img src="images/essentialsMSEXCEL.jpg" alt="Excel Essentials">
+          <img src="images/essentialsMSEXCEL.jpg" alt="Excel Essentials" onclick="openModal(this.src)" style="cursor: pointer;border-radius: 8px; width: 100%;" class="modal-trigger">
           <p class="gallery-title">Essential of MS Excel Certificate</p>
         </div>
         <!-- Add more items as needed -->
@@ -127,5 +128,15 @@
   <footer class="site-footer">
     &copy; 2025 Feryel Tesnim Kermiche. All rights reserved.
   </footer>
+
+  <div id="imageModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+    <img class="modal-content" id="fullImage">
+    <a class="next" onclick="changeImage(1)">&#10095;</a>
+    
+    <div id="caption"></div>
+  </div>
 </body>
 </html>

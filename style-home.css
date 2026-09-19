@@ -765,3 +765,26 @@ textarea:focus-visible {
   outline-offset: 3px;
 }
 
+/* Navigation Wrapping and Banner Height Fix */
+.banner {
+  height: 160px !important; /* Drops the purple box lower to fit the two lines */
+}
+
+main {
+  margin-top: 180px !important; 
+  padding-top: 40px !important; /* This removes the massive inner gap */
+}
+
+.banner nav {
+  align-items: center; /* Aligns single-line and double-line links perfectly in the middle */
+}
+
+.banner nav a {
+  white-space: nowrap; /* Forces "About Me" to stay on exactly one line */
+}
+
+.banner nav a.multiline-nav {
+  white-space: normal; /* Allows this specific link to have two lines */
+  text-align: center;
+  line-height: 1.2;
+}

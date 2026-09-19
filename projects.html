@@ -16,6 +16,7 @@
                 <nav>
                   <a href="index.html" class="nav-link">Home</a>
                   <a href="about.html" class="nav-link">About Me</a>
+                  <a href="journey.html" class="nav-link multiline-nav">Education &<br>Experience</a>
                   <a href="dissociated.html" class="nav-link" style="font-weight: bold;">DISSOCIATED</a>
                   <a href="projects.html" class="nav-link">Projects</a>
                   <a href="contact.html" class="nav-link">Contact</a>
@@ -25,7 +26,178 @@
 
   <main>
     <h1>Projects</h1>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Containerized PostgreSQL Analytics Stack</h2>
+          
+          <p><strong>Tech Stack:</strong> PostgreSQL | Docker Compose | pgAdmin | Advanced SQL (JSONB, GIN Indexes)</p>
+          
+          <p><strong>The Objective:</strong> To build a locally hosted, multi-container database architecture to securely store and analyze complex, unstructured gameplay data from the Space Cat Game.</p>
+          
+          <p><strong>The Solution:</strong> I orchestrated a Client-Server architecture using Docker Compose, deploying a PostgreSQL vault alongside a pgAdmin web interface on a private virtual network. I engineered an advanced relational schema utilizing UUIDs, Foreign Keys with cascading deletes, and a JSONB column optimized with a GIN index to handle highly flexible game session metadata.</p>
+          
+          <p><strong>Key Technical Features:</strong></p>
+          <ul>
+            <li><strong>Container Orchestration:</strong> Linked isolated database and web dashboard containers over a custom Docker network without port conflicts using <code>docker-compose.yml</code>.</li>
+            <li><strong>Advanced Data Modeling:</strong> Structured relational tables using UUIDs and Foreign Keys with <code>ON DELETE CASCADE</code> to enforce strict data integrity.</li>
+            <li><strong>High-Performance JSONB:</strong> Implemented a GIN (Generalized Inverted Index) utilizing <code>jsonb_path_ops</code> for lightning-fast querying of unstructured, nested JSON run data (e.g., tracking collected items and defeated bosses).</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <!-- Reusing the 2x2 grid CSS layout -->
+          <div class="image-gallery ansible-gallery"> 
+              <!-- Top Full-Width Diagram -->
+              <img src="images/postgres-architecture.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Docker Compose Database Architecture" class="ansible-main-img modal-trigger">
+              
+              <!-- 2x2 Grid for Code and Terminals -->
+              <div class="ansible-code-grid">
+                <img src="images/docker-compose.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Docker Compose YAML Blueprint" class="modal-trigger">
+                
+                <img src="images/compose-terminal.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Terminal Network Orchestration Execution" class="modal-trigger">
+                
+                <img src="images/postgres-schema.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Advanced SQL Schema and GIN Indexes" class="modal-trigger">
+
+                <img src="images/pgadmin-query.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="pgAdmin JSONB Query Results" class="modal-trigger">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
     
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated Multi-Node Infrastructure Provisioning</h2>
+          
+          <p><strong>Tech Stack:</strong> Ansible | Docker | Windows Subsystem for Linux (WSL) | YAML | SSH</p>
+          
+          <p><strong>The Objective:</strong> To build a locally simulated cloud environment using Docker, managed entirely agentless via Ansible to demonstrate scalable Infrastructure-as-Code (IaC) configuration management.</p>
+          
+          <p><strong>The Solution:</strong> I architected a local testing environment that bypasses the need for remote cloud instances by containerizing Ubuntu servers. I engineered declarative YAML playbooks to connect over SSH, enforcing configuration idempotency, automating bare-metal server provisioning, and standardizing user access management across multiple nodes simultaneously.</p>
+          
+          <p><strong>Key Technical Features:</strong></p>
+          <ul>
+            <li><strong>Infrastructure Automation:</strong> Built custom Docker images mapped to distinct local ports to simulate a multi-node cluster.</li>
+            <li><strong>Idempotent Workflows:</strong> Developed Ansible playbooks using <code>apt</code>, <code>user</code>, and <code>copy</code> modules to ensure consistent, repeatable OS-level setups.</li>
+            <li><strong>Agentless Orchestration:</strong> Executed configuration management over standard SSH protocols without installing tracking daemons on the target nodes.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery ansible-gallery"> 
+              <!-- Top Full-Width Diagram -->
+              <img src="images/ansible-architecture.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Ansible Infrastructure Architecture Diagram" class="ansible-main-img modal-trigger">
+              
+              <!-- 2x2 Grid for Code and Terminals -->
+              <div class="ansible-code-grid">
+                <img src="images/dockerfile.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Dockerfile Configuration" class="modal-trigger">
+                
+                <img src="images/inventory.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Inventory INI Configuration" class="modal-trigger">
+                
+                <img src="images/setup-yml.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Ansible Setup Playbook YAML" class="modal-trigger">
+
+                <img src="images/ansible-execution.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Terminal Execution and Docker Output" class="modal-trigger">
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+   <section class="content-box">
+      <div class="content" style="flex-direction: column; align-items: flex-start;">
+        
+
+      <!-- Top Section: Images on Left, Text on Right -->
+        <div style="display: flex; gap: 2rem; width: 100%; flex-wrap: wrap; align-items: center;">
+          
+          <!-- Image Block (Now on the Left) -->
+          <div class="image" style="flex: 1; min-width: 300px;">
+            <div class="image-gallery ansible-gallery"> 
+                <img src="images/codebuddy1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="CodeBuddy Arena Terminal Interface" class="ansible-main-img modal-trigger">
+                
+                <div class="ansible-code-grid"> 
+                  <img src="images/codebuddy2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Ranked Progression and PvP Matchmaking" class="modal-trigger">
+                  <img src="images/codebuddy3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Battle Log" class="modal-trigger">
+                  <img src="images/codebuddy4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Global Rankings Page" class="modal-trigger">
+                  <img src="images/codebuddy5.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Code Problem Example" class="modal-trigger">
+                </div>
+            </div>
+          </div>
+
+          <!-- Text Block (Now on the Right) -->
+          <div class="text" style="flex: 1.5; min-width: 300px;">
+            <h2>CodeBuddy Arena (Gamified Development Concept)</h2>
+            
+            <p><strong>Focus:</strong> System Design | UI/UX Conceptualization | Competitive Gamification | E-Learning</p>
+            
+            <p><strong>The Vision:</strong> To transform learning to code from an isolated struggle into an intense, skill-driven multiplayer experience. Think <em>Valorant</em>, but for software engineering—where algorithmic logic is your weapon and badges reflect your actual rank.</p>
+            
+            <p><strong>The Concept:</strong> Built as a conceptual university project, CodeBuddy is a terminal-inspired coding arena. It replaces standard tutorials with a competitive, game-like interface where developers enter specialized arenas, track battle logs, and engage in high-stakes programming combat.</p>
+            
+            <p><strong>Core Architectural Mechanics:</strong></p>
+            <ul>
+              <li><strong>Ranked Placement & Progression:</strong> Designed a mandatory entry evaluation system that tests technical proficiency to assign a baseline skill badge (Iron through Platinum).</li>
+              <li><strong>Competitive PvP Arenas:</strong> Conceptualized a 1v1 matchmaking architecture for timed coding matches (e.g., real-time bug fixing or function optimization) allowing users to climb the competitive ladder.</li>
+              <li><strong>Thematic Challenge Missions:</strong> Structured an arena-based learning curriculum featuring deep-dive missions into C/C++ memory management, Java concurrency, and full-stack web vulnerabilities.</li>
+              <li><strong>Integrated Training Grounds:</strong> Architected a "Bot Mode" for developers to spar against AI opponents and access contextual study materials without impacting their PvP Elo.</li>
+            </ul>
+
+            <!-- Live Site Link -->
+            <p style="margin-top: 25px; margin-bottom: 25px;">
+                <strong>Live Site:</strong> Enter the arena here:   
+                <br>
+                <a href="https://codebuddy101.netlify.app/" target="_blank" rel="noopener noreferrer" class="github-link">Launch CodeBuddy</a>
+            </p>
+
+            <!-- Dropdown Button for the PDF -->
+            <button class="pdf-toggle-btn" onclick="togglePDF('codebuddy-pdf', this)">
+              📄 View Software Engineering Documentation
+            </button>
+          </div>
+        </div> <!-- End of Top Section -->
+
+        <!-- Hidden PDF Container (Expands full width at the bottom) -->
+        <div id="codebuddy-pdf" class="pdf-container">
+          <iframe src="documents/software_engineering_project.pdf#view=FitH" title="CodeBuddy Software Engineering Documentation"></iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="content-box">
+      <div class="content">
+        <div class="text">
+          <h2>Automated IT Asset Tracker (ETL Pipeline)</h2>
+          
+          <p><strong>Tech Stack:</strong> Google Apps Script (Serverless) | GitHub REST API | Google Sheets | JSON</p>
+          
+          <p><strong>The Problem:</strong> Manual tracking of software projects leads to outdated reports and disconnected stakeholders.</p>
+          
+          <p><strong>The Solution:</strong> I engineered a serverless automation script that acts as a bridge between version control and operational reporting. It extracts live repository metadata, transforms raw JSON into structured tables, and loads it into a public dashboard.</p>
+          
+          <p><strong>Key Technical Features:</strong></p>
+          <ul>
+            <li><strong>API Integration:</strong> Implemented <code>UrlFetchApp</code> to query the GitHub REST API.</li>
+            <li><strong>Data Transformation:</strong> Parsed complex nested JSON objects into clean, tabular rows.</li>
+            <li><strong>Zero-Maintenance:</strong> Configured time-based triggers (CRON) for hourly auto-updates.</li>
+          </ul>
+        </div>
+        
+        <div class="image">
+          <div class="image-gallery stacked-images"> 
+              <img src="images/CHART.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="System Architecture Diagram" class="modal-trigger">
+              
+              <img src="images/GitHubAppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
+              
+              <img src="images/GitHubSheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="content-box">
       <div class="content">
         <div class="text">
@@ -82,66 +254,6 @@
               <img src="images/secondgame2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Easy Level" class="modal-trigger">
               <img src="images/secondgame3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Medium Level" class="modal-trigger">
               <img src="images/secondgame4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Memory Card Game Hard Level" class="modal-trigger">
-          </div>
-        </div>
-      </div>
-    </section>
-
-   <section class="content-box">
-      <div class="content">
-        <div class="text">
-          <h2>Automated Incident Response System</h2>
-          
-          <p><strong>Role:</strong> Automation Engineer (Independent) | <strong>Tech Stack:</strong> Google Apps Script, JavaScript, Gmail API</p>
-          
-          <p><strong>The Problem:</strong> Support tickets were sitting in the inbox for 20+ minutes before manual triage, creating a bottleneck between Customer Support and Engineering.</p>
-          
-          <p><strong>The Solution:</strong> I built a serverless background worker using Google Apps Script. It monitors the Gmail inbox via API, parses email bodies for keywords (e.g., 'Urgent', 'Bug'), and automatically logs them into a central Google Sheets database.</p>
-          
-          <p><strong>The Impact:</strong></p>
-          <ul>
-            <li>Reduced initial response time from <strong>20 min to <1 second</strong>.</li>
-            <li>Eliminated manual data entry for ticket logging.</li>
-            <li>Standardized data format for the Engineering team.</li>
-          </ul>
-        </div>
-        
-        <div class="image">
-          <div class="image-gallery stacked-images"> 
-              <img src="images/AppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
-              <img src="images/Sheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="content-box">
-      <div class="content">
-        <div class="text">
-          <h2>Automated IT Asset Tracker (ETL Pipeline)</h2>
-          
-          <p><strong>Tech Stack:</strong> Google Apps Script (Serverless) | GitHub REST API | Google Sheets | JSON</p>
-          
-          <p><strong>The Problem:</strong> Manual tracking of software projects leads to outdated reports and disconnected stakeholders.</p>
-          
-          <p><strong>The Solution:</strong> I engineered a serverless automation script that acts as a bridge between version control and operational reporting. It extracts live repository metadata, transforms raw JSON into structured tables, and loads it into a public dashboard.</p>
-          
-          <p><strong>Key Technical Features:</strong></p>
-          <ul>
-            <li><strong>API Integration:</strong> Implemented <code>UrlFetchApp</code> to query the GitHub REST API.</li>
-            <li><strong>Data Transformation:</strong> Parsed complex nested JSON objects into clean, tabular rows.</li>
-            <li><strong>Zero-Maintenance:</strong> Configured time-based triggers (CRON) for hourly auto-updates.</li>
-          </ul>
-        </div>
-        
-        <div class="image">
-          <div class="image-gallery stacked-images"> 
-              <img src="images/CHART.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="System Architecture Diagram" class="modal-trigger">
-              
-              <img src="images/GitHubAppsScript.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Apps Script Code" class="modal-trigger">
-              
-              <img src="images/GitHubSheets.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Results on Google Sheets" class="modal-trigger">
           </div>
         </div>
       </div>
