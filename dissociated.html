@@ -25,21 +25,23 @@
         </div>
     </header>
 
-    <section class="content-box" style="text-align: center; padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
-        <h1 style="font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 10px; color: #fff;">DISSOCIATED</h1>
-        <p style="font-size: 1.2rem; color: #aaa; margin-bottom: 30px;">A First-Person Detective Mystery built in Unreal Engine 5</p>
-        
-        <div class="video-container" style="max-width: 900px; margin: 0 auto; box-shadow: 0 0 15px rgba(76, 175, 80, 0.2);">
-            <video width="100%" height="auto" controls poster="images/GameThumbnail.png" style="border-radius: 4px;">
-                <source src="images/Video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    <!-- Wrap everything in the main tag so it inherits your global spacing -->
+    <main>
+        <section class="content-box" style="text-align: center; padding-top: 20px; padding-bottom: 40px;">
+            <h1 style="font-size: 3.5rem; letter-spacing: 5px; margin-bottom: 10px; color: #fff;">DISSOCIATED</h1>
+            <p style="font-size: 1.2rem; color: #aaa; margin-bottom: 30px;">A First-Person Detective Mystery built in Unreal Engine 5</p>
+            
+            <div class="video-container" style="max-width: 900px; margin: 0 auto; box-shadow: 0 0 15px rgba(76, 175, 80, 0.2);">
+                <video width="100%" height="auto" controls poster="images/GameThumbnail.png" style="border-radius: 4px;">
+                    <source src="images/Video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
 
-            <p style="padding: 10px; color: #ccc; font-size: 0.9rem; margin: 0; font-style: italic; text-align: center;">
-                🎥 <strong>Gameplay Showcase:</strong> A brief clip demonstrating the level design, inventory system, atmospheric lighting, and 'Thread' deduction mechanic in action.
-            </p>
-        </div>
-    </section>
+                <p style="padding: 10px; color: #ccc; font-size: 0.9rem; margin: 0; font-style: italic; text-align: center;">
+                    🎥 <strong>Gameplay Showcase:</strong> A brief clip demonstrating the level design, inventory system, atmospheric lighting, and 'Thread' deduction mechanic in action.
+                </p>
+            </div>
+        </section>
     
 
      <section class="content-box" style="padding-top: 20px; padding-bottom: 40px; height: auto !important; min-height: 0 !important;">
@@ -266,9 +268,10 @@
             </div>
         </div>
     </section>
+    <!-- Add this closing tag right above the footer -->
+    </main>
 
-
-   <footer style="text-align: center; padding: 50px 20px;">
+    <footer style="text-align: center; padding: 50px 20px;">
         <h3>Interested in the details?</h3>
         <div class="links" style="margin-top: 20px;">
             <a href="screenshots/PITCH_DECK.pdf" 
