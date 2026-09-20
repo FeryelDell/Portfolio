@@ -28,6 +28,58 @@
     <h1>Projects</h1>
 
     <section class="content-box">
+      <div class="content" style="flex-direction: column; align-items: flex-start;">
+        
+        <!-- Top Section: Images on Left, Text on Right -->
+        <div style="display: flex; gap: 2rem; width: 100%; flex-wrap: wrap; align-items: center;">
+          
+          <!-- Image Block (Now on the Left) -->
+          <div class="image" style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 1.5rem;">
+            
+            <!-- Main Feature Image (Top) -->
+            <img src="images/GameScout1.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Main Interface" class="modal-trigger">
+            
+            <!-- 2x3 Grid to fill the vertical space -->
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;"> 
+              <img src="images/GameScout2.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Light Mode Theme" class="modal-trigger">
+              <img src="images/GameScout3.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Wishlist Feature" class="modal-trigger">
+              <img src="images/GameScout4.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Game Details View" class="modal-trigger">
+              <img src="images/GameScout5.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Live Market Data" class="modal-trigger">
+              <img src="images/GameScout6.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Svelte Structure Diagram" class="modal-trigger">
+              <img src="images/GameScout7.png" onclick="openModal(this.src)" style="cursor: pointer; width: 100%; border-radius: 8px;" alt="Game Scout Code Snippet" class="modal-trigger">
+            </div>
+            
+          </div>
+
+          <!-- Text Block (Now on the Right) -->
+          <div class="text" style="flex: 1.5; min-width: 300px;">
+            <h2>Game Scout Automation</h2>
+            
+            <p><strong>Tech Stack:</strong> React | Electron | Tailwind CSS | Python | GitLab CI/CD | Discord Webhooks</p>
+            
+            <p><strong>Core Technical Achievements:</strong></p>
+            <ul>
+              <li>Developed a cross-platform desktop application using React, Electron, and Tailwind CSS to aggregate, filter, and visualize large datasets from multiple REST APIs.</li>
+              <li>Engineered a custom JavaScript algorithm to intercept and parse raw JSON payloads, automatically merging duplicate API entries to calculate and display the most cost-effective pricing options.</li>
+              <li>Automated backend data extraction by writing a Python scraper deployed via GitLab CI/CD pipelines, building a reliable daily pipeline for market data without manual intervention.</li>
+              <li>Architected a state-driven user interface that successfully handles asynchronous pagination for heavy database queries, preventing application crashes and ensuring stable memory management.</li>
+              <li>Integrated Discord Webhook operations into the data pipeline to automatically broadcast a formatted, daily digest of prioritized data points directly to a server.</li>
+              <li>Implemented local storage solutions to build a dynamic, persistent theme engine that seamlessly toggles global CSS properties across the application.</li>
+            </ul>
+
+            <!-- Repository Link -->
+            <p style="margin-top: 25px; margin-bottom: 25px;">
+                <strong>Source Code:</strong> Review the project architecture and CI/CD pipelines here:   
+                <br>
+                <a href="YOUR_GITLAB_LINK_HERE" target="_blank" rel="noopener noreferrer" class="github-link">View on GitLab</a>
+            </p>
+          </div>
+
+        </div> <!-- End of Section -->
+      </div>
+    </section>
+
+    <section class="content-box">
       <div class="content">
         <div class="text">
           <h2>Containerized PostgreSQL Analytics Stack</h2>
@@ -106,28 +158,13 @@
       </div>
     </section>
 
-   <section class="content-box">
+<section class="content-box">
       <div class="content" style="flex-direction: column; align-items: flex-start;">
         
-
-      <!-- Top Section: Images on Left, Text on Right -->
+        <!-- Top Section: Text on Left, Images on Right -->
         <div style="display: flex; gap: 2rem; width: 100%; flex-wrap: wrap; align-items: center;">
           
-          <!-- Image Block (Now on the Left) -->
-          <div class="image" style="flex: 1; min-width: 300px;">
-            <div class="image-gallery ansible-gallery"> 
-                <img src="images/codebuddy1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="CodeBuddy Arena Terminal Interface" class="ansible-main-img modal-trigger">
-                
-                <div class="ansible-code-grid"> 
-                  <img src="images/codebuddy2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Ranked Progression and PvP Matchmaking" class="modal-trigger">
-                  <img src="images/codebuddy3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Battle Log" class="modal-trigger">
-                  <img src="images/codebuddy4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Global Rankings Page" class="modal-trigger">
-                  <img src="images/codebuddy5.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Code Problem Example" class="modal-trigger">
-                </div>
-            </div>
-          </div>
-
-          <!-- Text Block (Now on the Right) -->
+          <!-- Text Block (Now on the Left) -->
           <div class="text" style="flex: 1.5; min-width: 300px;">
             <h2>CodeBuddy Arena (Gamified Development Concept)</h2>
             
@@ -157,6 +194,21 @@
               📄 View Software Engineering Documentation
             </button>
           </div>
+
+          <!-- Image Block (Now on the Right) -->
+          <div class="image" style="flex: 1; min-width: 300px;">
+            <div class="image-gallery ansible-gallery"> 
+                <img src="images/codebuddy1.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="CodeBuddy Arena Terminal Interface" class="ansible-main-img modal-trigger">
+                
+                <div class="ansible-code-grid"> 
+                  <img src="images/codebuddy2.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Ranked Progression and PvP Matchmaking" class="modal-trigger">
+                  <img src="images/codebuddy3.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Battle Log" class="modal-trigger">
+                  <img src="images/codebuddy4.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Global Rankings Page" class="modal-trigger">
+                  <img src="images/codebuddy5.png" onclick="openModal(this.src)" style="cursor: pointer;" alt="Code Problem Example" class="modal-trigger">
+                </div>
+            </div>
+          </div>
+
         </div> <!-- End of Top Section -->
 
         <!-- Hidden PDF Container (Expands full width at the bottom) -->
